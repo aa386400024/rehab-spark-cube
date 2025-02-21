@@ -1,0 +1,38 @@
+{
+    "id": "zhiyumofang",
+    "name": "3D模型展示、动画播放、模型点击 - three.js（threeJs）",
+    "displayName": "3D模型展示、动画播放、模型点击 - three.js（threeJs）",
+    "version": "1.1.0",
+    "description": "基于vue3+three-platformize的快速渲染3D模型的demo，最新版兼容了h5和app(render.js)",
+    "keywords": [
+        "vue3",
+        "three.js",
+        "three-platformize",
+        "3D模型",
+        "threejs"
+    ],
+    "scripts": {
+        "postinstall": "patch-package",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dcloudext": {
+        "type": "component-vue",
+        "sale": {
+            "regular": {
+                "price": "0.00"
+            },
+            "sourcecode": {
+                "price": "0.00"
+            }
+        }
+    },
+    "dependencies": {
+        "gltf-pipeline": "^4.1.0",
+        "pinia": "^3.0.1",
+        "three": "^0.173.0",
+        "three-platformize": "^1.133.3"
+    },
+    "devDependencies": {
+        "patch-package": "^8.0.0"
+    }
+}
