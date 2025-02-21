@@ -21,3 +21,5 @@ dist/
 *.log
 
 .hbuilderx/
+
+uniCloud-aliyun/
