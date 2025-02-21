@@ -1,7 +1,11 @@
 <template>
 	<view>
-		<button @click="navigateToFunctionPage">跳转到功能页</button>
-		<exercise-plan-card :title="customTitle" :moreText="customMoreText" :itemList="customPlanList" />
+		<card-list 
+			:title="customTitle" 
+			:moreText="customMoreText" 
+			:itemList="customPlanList" 
+			@onCardClick="handleCardClick"
+		/>
 	</view>
 </template>
 
@@ -25,16 +29,26 @@
 	const options = ref({});
 
 	const customTitle = ref('我的专属计划');
-	const customMoreText = ref('查看全部计划 >');
+	const customMoreText = ref('查看全部检测');
 	const customPlanList = ref([{
+			id: 1, // 唯一标识符
+			name: 'PlanA',
 			title: '快速减脂计划',
-			desc: '5天快速燃脂',
-			imageUrl: 'https://example.com/fat - loss.jpg'
+			imageUrl: 'https://mp-c323035b-5498-4245-b5ac-ff13429389dd.cdn.bspapp.com/banner/ai-rehab.png',
+			iconType: 'iconType1',
+			iconSize: 20,
+			iconColor: '#333',
+			desc: '5天快速燃脂'
 		},
 		{
+			id: 2, // 唯一标识符
+			name: 'PlanA',
 			title: '增肌塑形计划',
-			desc: '8周肌肉增长',
-			imageUrl: 'https://example.com/muscle - gain.jpg'
+			imageUrl: 'https://mp-c323035b-5498-4245-b5ac-ff13429389dd.cdn.bspapp.com/banner/ai-rehab.png',
+			iconType: 'iconType1',
+			iconSize: 20,
+			iconColor: '#333',
+			desc: '8周肌肉增长'
 		}
 	]);
 
@@ -73,9 +87,9 @@
 	const pageTo = (path) => {
 		vk.navigateTo(path);
 	};
-
-	// 跳转到功能页的函数
-	const navigateToFunctionPage = () => {
+	
+	const handleCardClick = (item, index) => {
+	    console.log(' 点击了卡片', item, index);
 		vk.navigateTo({
 			url: '/subpages/person-model/person-model', // 替换为实际功能页路径
 			success: (res) => {

@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "custom-icon"; /* Project id 4831454 */
+  src: url('./iconfont.woff2?t=1740122325040') format('woff2');
+}
+
+.custom-icon {
+  font-family: "custom-icon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.custom-icon-fuwu2:before {
+  content: "\e61b";
+}
+
+.custom-icon-icon39:before {
+  content: "\e626";
+}
+
+.custom-icon-kangfuzhongxin-copy:before {
+  content: "\e627";
+}
+
+.custom-icon-shequshuoshi:before {
+  content: "\e608";
+}
+
+.custom-icon-jiankanghuanjing-01:before {
+  content: "\e62d";
+}
+
+.custom-icon-deyushu-01:before {
+  content: "\e639";
+}
+
+.custom-icon-wode:before {
+  content: "\e6e1";
+}
+
+.custom-icon-gongju:before {
+  content: "\e68f";
+}
+
+.custom-icon-shequ:before {
+  content: "\e690";
+}
+
+.custom-icon-shequ1:before {
+  content: "\100c6";
+}
+
+.custom-icon-kangfuke:before {
+  content: "\e898";
+}
+

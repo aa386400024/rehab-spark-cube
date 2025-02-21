@@ -56,6 +56,7 @@
 
 <style lang="scss">
 	/*每个页面公共css */
+	@import "@/static/font/iconfont.css";
 	@import "./uni_modules/vk-uview-ui/index.scss";
 	@import "./common/css/app.scss";
 </style>
