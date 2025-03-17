@@ -9,12 +9,11 @@
 				v-if="showMoreButton" 
 				@click="handleViewMore"
 			>
-				{{ moreText }} 
-				<u-icon 
-					custom-prefix="custom-icon" 
-					name="custom-icon-shequ" 
+				{{ moreText }}  
+				<u-icon
+					name="arrow-right" 
 					size="20"
-					color="#333" 
+					color="#999" 
 				></u-icon>
 			</view>
 		</view>
