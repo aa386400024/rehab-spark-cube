@@ -48,6 +48,7 @@ export default {
 		 */
 		mode: 2,
 		list: [
+			"/subpages/*", // 开发阶段，先放开登录拦截
 			"/pages_template/*",
 			"/pages/login/*",
 			"/pages/index/*",

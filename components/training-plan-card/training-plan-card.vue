@@ -1,8 +1,8 @@
 <template>
-	<view class="training-plan-card">
+	<view class="training-plan-card" @click="handleClick">
 		<!-- 标签 -->
 		<view v-if="tag" class="tag">{{ tag }}</view>
-		
+
 		<!-- 背景图 -->
 		<view class="card-bg">
 			<image class="background-image" :src="backgroundImage" mode="aspectFill"></image>
@@ -76,6 +76,14 @@
 			default: '评估身体状况，为你定制训练方案',
 		},
 	});
+
+	// 定义要触发的事件
+	const emit = defineEmits(['cardClick']);
+
+	// 点击事件处理函数
+	const handleClick = () => {
+		emit('cardClick');
+	};
 </script>
 
 <style lang="scss" scoped>
@@ -85,7 +93,7 @@
 		overflow: hidden;
 		color: #fff;
 		padding: 30rpx;
-		
+
 		.tag {
 			position: absolute;
 			top: 0;
@@ -116,7 +124,7 @@
 
 		.content {
 			padding: 0 30rpx;
-			
+
 			.title {
 				font-weight: bold;
 				font-size: 38rpx;

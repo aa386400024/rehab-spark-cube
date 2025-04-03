@@ -2,16 +2,17 @@
 	<z-paging ref="paging">
 		<view>
 			<training-plan-card 
-				title="大正爱跑步 轻松拿捏 5 公里计划" 
-				subtitle="大正领跑 带你稳拿新 PB" 
+				title="开启智能康复之旅 重塑健康活力之躯" 
+				subtitle="全程守护，见证身体蜕变之路" 
 				tag="专为 酷酷的大炮 打造"
 				:backgroundImage="backgroundImage" 
 				:infoList="[
-					{ label: '计划时长', value: '4-8周' },
-					{ label: '每周训练', value: '3-5天' },
-					{ label: '预计消耗', value: '1000+卡路里' }
+					{ label: '康复周期', value: '4-8周' },
+					{ label: '运动频次', value: '3-5次/周' },
+					{ label: '康复效果', value: '30%体能' }
 				]" 
-				actionText="评估身体状况，为你定制训练方案" 
+				actionText="立即评估，开启康复计划" 
+				@cardClick="handleTopCardClick"
 			/>
 			<card-list 
 				:title="customTitle" 
@@ -131,6 +132,18 @@
 	// 跳转到指定页面的函数
 	const pageTo = (path) => {
 		vk.navigateTo(path);
+	};
+	
+	const handleTopCardClick = () => {
+		vk.navigateTo({
+			url: '/subpages/evalution-manager/evalution-manager', // 替换为实际功能页路径
+			success: (res) => {
+				console.log('跳转成功');
+			},
+			fail: (err) => {
+				console.log('跳转失败', err);
+			}
+		});
 	};
 
 	const handleCardClick = (item, index) => {

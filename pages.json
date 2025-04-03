@@ -38,6 +38,16 @@
 			{
 				"navigationBarTitleText" : ""
 			}
+		},
+		{
+			"path" : "evalution-manager/evalution-manager",
+			"style" : 
+			{
+				"navigationStyle": "custom",
+				"navigationBarTitleText" : "",
+				"navigationBarTextStyle": "white",
+				"disableScroll": true
+			}
 		}
 			
 		]
